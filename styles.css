@@ -1,0 +1,34 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Arial";
+}
+
+h1,
+#search {
+    color: white;
+}
+
+#click {
+    cursor: pointer;
+}
+
+#map {
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+}
+
+body {
+    background-color: black;
+}
