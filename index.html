@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neighbourhood Map Project</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <h1>Discover Mysore!</h1>
+        <input id="input" class="controls" type="filteredLocs" data-bind="textInput: search_locations, valueUpdate: 'keyup'"></input>
+        <div id="search">
+            <h2>Places</h2>
+            <div>
+                <ul data-bind="foreach: filteredLocs()">
+                    <li id="click" data-bind="text: title, click:$parent.listItem"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="knockout-3.4.0/knockout-3.4.0.js"></script>
+<script async src="js/app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANteH1od7s9p0z6Vl0ThWg92Fo1Cjc5_o&callback=initMap" onerror="googleError()" async defer></script>
+
+</html>
