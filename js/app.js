@@ -1,4 +1,4 @@
-//declare map variable in global scope as pointed in the Udacity forum by Karol
+//declare map variable in global scope 
 var map;
 //declare an array of locations to be shown on the map with lat,lng and title
 var locations = [{
@@ -87,15 +87,12 @@ var viewModel = function() {
             var locTitles = place.title;
             var wikiUrl = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + locTitles + "&limit=1&redirects=return&format=json";
 
-            // Wikipedia API for fetching articles on the locations. Reference : Cameron's videos on APIs and AJAX requests and guidelines on Udacity Forum
-            // The following are the sources from where I learnt how to implement the very confusing and not-so-clear wikipedia API.
-            // 1.Cameron's video 
-            // 2.AndrewR's awesome guidelines on this page https://discussions.udacity.com/t/linking-wiki-api-to-infowindow/46966
-            // 3.JohnMav's guidelines on this page https://discussions.udacity.com/t/wikimedia-api-wikipedia-problem/21176
-            // 4.http://stackoverflow.com/questions/34761587/about-wiki-api-and-cannot-get-proper-response-with-ajax
+            // Wikipedia API for fetching articles on the locations. References:
+            // 1.Guidelines on this page https://discussions.udacity.com/t/linking-wiki-api-to-infowindow/46966
+            // 2.Guidelines on this page https://discussions.udacity.com/t/wikimedia-api-wikipedia-problem/21176
+            // 3.http://stackoverflow.com/questions/34761587/about-wiki-api-and-cannot-get-proper-response-with-ajax
 
 
-            //coded as per Cameron's instructions on error handling with jsonp
             var wikiRequestTimeout = setTimeout(function() {
                 var wikiContent = '<h3>' + locTitles + '<li>"Failed to fetch article!"</li>';
                 self.infoWindow.setContent(wikiContent);
